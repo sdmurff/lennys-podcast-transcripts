@@ -8,7 +8,9 @@
 # - Incremental: appends to existing keyword files
 # - Resume support: can be interrupted and restarted
 
-set -e
+# NB: intentionally not using `set -e`. The per-episode steps have their own
+# `|| true` / `|| echo` guards, and a single transient Claude call failure should
+# skip that episode, not abort the whole (idempotent, resumable) run.
 
 EPISODES_DIR="${EPISODES_DIR:-episodes}"
 OUTPUT_DIR="${OUTPUT_DIR:-index}"

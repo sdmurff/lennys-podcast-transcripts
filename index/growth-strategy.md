@@ -35,3 +35,6 @@ Episodes discussing **growth strategy**:
 - [Sahil Mansuri](../episodes/sahil-mansuri/transcript.md)
 - [Sean Ellis](../episodes/sean-ellis/transcript.md)
 - [Shishir Mehrotra](../episodes/shishir-mehrotra/transcript.md)
+- [Amol Avasare](../episodes/amol-avasare/transcript.md)
+- [Jason Cohen](../episodes/jason-cohen/transcript.md)
+- [Michelle Rial](../episodes/michelle-rial/transcript.md)

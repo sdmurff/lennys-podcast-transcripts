@@ -19,3 +19,5 @@ Episodes discussing **experimentation**:
 - [Sam Schillace](../episodes/sam-schillace/transcript.md)
 - [Sri Batchu](../episodes/sri-batchu/transcript.md)
 - [Tim Holley](../episodes/tim-holley/transcript.md)
+- [Amol Avasare](../episodes/amol-avasare/transcript.md)
+- [Simon Willison](../episodes/simon-willison/transcript.md)

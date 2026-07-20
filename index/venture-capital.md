@@ -23,3 +23,6 @@ Episodes discussing **venture capital**:
 - [Geoffrey Moore](../episodes/geoffrey-moore/transcript.md)
 - [Gustaf Alstromer](../episodes/gustaf-alstromer/transcript.md)
 - [Madhavan Ramanujam](../episodes/madhavan-ramanujam/transcript.md)
+- [Eric Ries](../episodes/eric-ries-20/transcript.md)
+- [Keith Rabois](../episodes/keith-rabois/transcript.md)
+- [Sam Lessin](../episodes/sam-lessin/transcript.md)

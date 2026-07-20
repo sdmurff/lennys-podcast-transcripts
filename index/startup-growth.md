@@ -26,3 +26,6 @@ Episodes discussing **startup growth**:
 - [Pete Kazanjy](../episodes/pete-kazanjy/transcript.md)
 - [Scott Wu](../episodes/scott-wu/transcript.md)
 - [Sean Ellis](../episodes/sean-ellis/transcript.md)
+- [Sequoia  Coach Brian Halligan](../episodes/brian-halligan/transcript.md)
+- [Cat Wu](../episodes/cat-wu/transcript.md)
+- [Qasar Younis](../episodes/qasar-younis/transcript.md)

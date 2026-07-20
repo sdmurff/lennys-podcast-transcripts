@@ -11,3 +11,5 @@ Episodes discussing **retention**:
 - [Naomi Gleit](../episodes/naomi-gleit/transcript.md)
 - [Patrick Campbell](../episodes/patrick-campbell/transcript.md)
 - [Tim Holley](../episodes/tim-holley/transcript.md)
+- [Jason Cohen](../episodes/jason-cohen/transcript.md)
+- [Noam Segal](../episodes/noam-segal/transcript.md)

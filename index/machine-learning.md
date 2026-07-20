@@ -12,3 +12,4 @@ Episodes discussing **machine learning**:
 - [Ramesh Johari](../episodes/ramesh-johari/transcript.md)
 - [Ryan J. Salva](../episodes/ryan-j-salva/transcript.md)
 - [Shweta Shriva](../episodes/shweta-shriva/transcript.md)
+- [Boris Cherny](../episodes/boris-cherny/transcript.md)

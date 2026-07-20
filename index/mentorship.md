@@ -9,3 +9,5 @@ Episodes discussing **mentorship**:
 - [Fareed Mosavat](../episodes/fareed-mosavat/transcript.md)
 - [Jules Walter](../episodes/jules-walter/transcript.md)
 - [Melissa Tan](../episodes/melissa-tan/transcript.md)
+- [Dr. Becky Kennedy](../episodes/dr-becky-kennedy/transcript.md)
+- [Sam Lessin](../episodes/sam-lessin/transcript.md)

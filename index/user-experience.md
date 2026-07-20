@@ -10,3 +10,5 @@ Episodes discussing **user experience**:
 - [Katie Dill](../episodes/katie-dill/transcript.md)
 - [Krithika Shankarraman](../episodes/krithika-shankarraman/transcript.md)
 - [Merci Grace](../episodes/merci-grace/transcript.md)
+- [Evan Spiegel](../episodes/evan-spiegel/transcript.md)
+- [Jenny Wen](../episodes/jenny-wen/transcript.md)

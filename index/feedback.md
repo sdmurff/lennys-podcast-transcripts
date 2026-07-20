@@ -9,3 +9,4 @@ Episodes discussing **feedback**:
 - [Kim Scott](../episodes/kim-scott/transcript.md)
 - [Matt Abrahams](../episodes/matt-abrahams/transcript.md)
 - [Vikrama Dhiman](../episodes/vikrama-dhiman/transcript.md)
+- [Dr. Becky Kennedy](../episodes/dr-becky-kennedy/transcript.md)

@@ -21,3 +21,5 @@ Episodes discussing **hiring**:
 - [Nabeel S. Qureshi](../episodes/nabeel-s-qureshi/transcript.md)
 - [Pete Kazanjy](../episodes/pete-kazanjy/transcript.md)
 - [Phyl Terry](../episodes/phyl-terry/transcript.md)
+- [Jacob Warwick](../episodes/jacob-warwick/transcript.md)
+- [Keith Rabois](../episodes/keith-rabois/transcript.md)

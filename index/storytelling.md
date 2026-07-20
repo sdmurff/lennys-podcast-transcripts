@@ -9,3 +9,7 @@ Episodes discussing **storytelling**:
 - [Nancy Duarte](../episodes/nancy-duarte/transcript.md)
 - [Petra Wille](../episodes/petra-wille/transcript.md)
 - [Yamashata](../episodes/yamashata/transcript.md)
+- [Claire Vo](../episodes/claire-vo-openclaw/transcript.md)
+- [Jacob Warwick](../episodes/jacob-warwick/transcript.md)
+- [Michelle Rial](../episodes/michelle-rial/transcript.md)
+- [Tony Fadell](../episodes/tony-fadell/transcript.md)
