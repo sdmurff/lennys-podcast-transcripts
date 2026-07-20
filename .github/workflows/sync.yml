@@ -49,12 +49,24 @@ jobs:
             python3 scripts/sync.py --no-keywords
           fi
 
+      # If keywords were generated, update the topic index for the new episodes only
+      # (deterministic, no Claude calls). Scoped so the curated existing index is left
+      # untouched.
+      - name: Update topic index for new episodes
+        if: ${{ github.event.inputs.keywords == 'true' }}
+        run: |
+          new=$(git status --porcelain episodes \
+                | sed -n 's#.*episodes/\([^/]*\)/transcript.md#\1#p' | paste -sd, -)
+          if [ -n "$new" ]; then
+            python3 scripts/index_from_frontmatter.py --only "$new"
+          fi
+
       - name: Commit and push if changed
         run: |
           git config user.name  "lenny-sync-bot"
           git config user.email "actions@github.com"
-          if [ -n "$(git status --porcelain episodes)" ]; then
-            git add episodes
+          if [ -n "$(git status --porcelain episodes index)" ]; then
+            git add episodes index
             n=$(git status --porcelain episodes | grep -c 'transcript.md' || true)
             git commit -m "sync: add new episode transcripts from Dropbox ($n files)"
             git push

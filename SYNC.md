@@ -33,7 +33,13 @@ text and a minimal frontmatter, and reported as unmatched for manual review.
 python3 scripts/sync.py --dry-run     # show what would be added, write nothing
 python3 scripts/sync.py               # ingest new episodes (+ keywords)
 python3 scripts/sync.py --no-keywords # metadata only, no Claude calls
-./scripts/build-index.sh              # rebuild the topic index in index/
+
+# Topic index. index_from_frontmatter.py is deterministic (reads the keywords sync.py
+# already wrote, no Claude calls). Scope it to the episodes you just added:
+python3 scripts/index_from_frontmatter.py --only "cat-wu,boris-cherny"
+# build-index.sh is the from-scratch generator that calls Claude to create keywords for
+# episodes that don't have them yet:
+./scripts/build-index.sh
 ```
 
 ## Automated updates
