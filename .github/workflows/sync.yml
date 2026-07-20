@@ -1,0 +1,63 @@
+name: Sync new transcripts
+
+# Keeps this fork current with Lenny's public Dropbox folder, which he updates as
+# each new episode airs. Pulls the transcript text from Dropbox, matches each new
+# episode to its YouTube video for metadata, writes it in the repo's episode layout,
+# then commits and pushes. Runs weekly and on manual dispatch.
+
+on:
+  schedule:
+    - cron: "0 14 * * 1"   # Mondays 14:00 UTC
+  workflow_dispatch:
+    inputs:
+      keywords:
+        description: "Generate frontmatter keywords with Claude (needs ANTHROPIC_API_KEY secret)"
+        type: boolean
+        default: false
+
+concurrency:
+  group: sync
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install yt-dlp
+        run: pip install --upgrade yt-dlp
+
+      # sync.py is stdlib-only; it downloads the Dropbox zip and dumps the channel
+      # itself. Keyword generation is off by default so the routine run needs no API
+      # key. Flip the "keywords" input on a manual dispatch (with the secret set) to
+      # populate frontmatter keywords too.
+      - name: Ingest new episodes
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ "${{ github.event.inputs.keywords }}" = "true" ]; then
+            python3 scripts/sync.py
+          else
+            python3 scripts/sync.py --no-keywords
+          fi
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "lenny-sync-bot"
+          git config user.email "actions@github.com"
+          if [ -n "$(git status --porcelain episodes)" ]; then
+            git add episodes
+            n=$(git status --porcelain episodes | grep -c 'transcript.md' || true)
+            git commit -m "sync: add new episode transcripts from Dropbox ($n files)"
+            git push
+          else
+            echo "No new episodes."
+          fi

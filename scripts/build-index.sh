@@ -71,7 +71,7 @@ PROMPT_END
     cat "$transcript_temp" >> "$prompt_file"
 
     # Call Claude for keywords
-    raw_response=$(claude --model claude-sonnet-4-20250514 -p < "$prompt_file" 2>/dev/null || echo '{"keywords": []}')
+    raw_response=$(claude --model claude-haiku-4-5-20251001 -p < "$prompt_file" 2>/dev/null || echo '{"keywords": []}')
 
     # Strip markdown code blocks if present and extract JSON
     response=$(echo "$raw_response" | grep -o '{.*}' | head -1 || echo '{"keywords": []}')
